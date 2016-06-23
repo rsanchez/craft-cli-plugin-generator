@@ -1,11 +1,11 @@
 /**
- * <%= pluginName %> plugin for Craft CMS
+ * {{pluginName}} plugin for Craft CMS
  *
- * <%= pluginName %> JS
+ * {{pluginName}} JS
  *
- * @author    <%= pluginAuthorName %>
- * @copyright <%= copyrightNotice %>
- * @link      <%= pluginAuthorUrl %>
- * @package   <%= pluginHandle %>
- * @since     <%= pluginVersion %>
+ * @author    {{pluginAuthorName}}
+ * @copyright {{copyrightNotice}}
+ * @link      {{pluginAuthorUrl}}
+ * @package   {{pluginHandle}}
+ * @since     {{pluginVersion}}
  */

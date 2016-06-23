@@ -37,6 +37,7 @@ var fs              = require('fs');
 var child_process   = require('child_process');
 var path            = require('path');
 var optionOrPrompt  = require('yeoman-option-or-prompt');
+var handlebars      = require('yeoman-handlebars-engine');
 
 module.exports = yo.generators.Base.extend({
 
@@ -48,6 +49,7 @@ module.exports = yo.generators.Base.extend({
         this.log(chalk.yellow.bold('[ Initializing ]'));
         var done = this.async();
 
+        this.engine = handlebars;
         this.answers = {};
         this.askApiVersion = true;
 

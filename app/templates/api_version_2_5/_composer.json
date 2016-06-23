@@ -1,11 +1,11 @@
 {
-	"name": "<%= pluginAuthorGithub %>/<%= pluginDirName %>'",
-	"description": "<%= pluginDescription %>",
+	"name": "{{pluginAuthorGithub}}/{{pluginDirName}}'",
+	"description": "{{pluginDescription}}",
 	"type": "craft-plugin",
 	"authors": [
 		{
-			"name": "<%= pluginAuthorName %>",
-			"homepage": "<%= pluginAuthorUrl %>"
+			"name": "{{pluginAuthorName}}",
+			"homepage": "{{pluginAuthorUrl}}"
 		}
 	],
 	"require": {

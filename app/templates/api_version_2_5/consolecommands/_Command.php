@@ -1,10 +1,10 @@
 <?php
 /**
- * <%= pluginName %> plugin for Craft CMS
+ * {{pluginName}} plugin for Craft CMS
  *
- * <%= pluginHandle %> Command
+ * {{pluginHandle}} Command
  *
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
  * --snip--
  * Craft is built on the Yii framework and includes a command runner, yiic in ./craft/app/etc/console/yiic
  *
@@ -12,31 +12,31 @@
  * a description of what the method does (for example, actionPrint().  The actionIndex() method is what
  * is executed if no sub-commands are supplied, e.g.:
  *
- * ./craft/app/etc/console/yiic <%= pluginDirName %>
+ * ./craft/app/etc/console/yiic {{pluginDirName}}
  *
  * The actionPrint() method above would be invoked via:
  *
- * ./craft/app/etc/console/yiic <%= pluginDirName %> print
+ * ./craft/app/etc/console/yiic {{pluginDirName}} print
  *
  * http://spin.atomicobject.com/2015/06/16/craft-console-plugin/
  * --snip--
  *
-<% } -%>
- * @author    <%= pluginAuthorName %>
- * @copyright <%= copyrightNotice %>
- * @link      <%= pluginAuthorUrl %>
- * @package   <%= pluginHandle %>
- * @since     <%= pluginVersion %>
+{{/if}}
+ * @author    {{pluginAuthorName}}
+ * @copyright {{copyrightNotice}}
+ * @link      {{pluginAuthorUrl}}
+ * @package   {{pluginHandle}}
+ * @since     {{pluginVersion}}
  */
 
 namespace Craft;
 
-class <%= pluginHandle %>Command extends BaseCommand
+class {{pluginHandle}}Command extends BaseCommand
 {
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
-     * Handle our plugin's index action command, e.g.: ./craft/app/etc/console/yiic <%= pluginDirName %>
-<% } -%>
+{{#if codeComments}}
+     * Handle our plugin's index action command, e.g.: ./craft/app/etc/console/yiic {{pluginDirName}}
+{{/if}}
      */
     public function actionIndex($param="")
     {

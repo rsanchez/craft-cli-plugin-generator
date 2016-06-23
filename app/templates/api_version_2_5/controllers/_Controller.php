@@ -1,10 +1,10 @@
 <?php
 /**
- * <%= pluginName %> plugin for Craft CMS
+ * {{pluginName}} plugin for Craft CMS
  *
- * <%= pluginHandle %><%= controllerName[index] %> Controller
+ * {{pluginHandle}}{{controllerName[index]}} Controller
  *
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
  * --snip--
  * Generally speaking, controllers are the middlemen between the front end of the CP/website and your plugin’s
  * services. They contain action methods which handle individual tasks.
@@ -19,17 +19,17 @@
  * https://craftcms.com/docs/plugins/controllers
  * --snip--
  *
-<% } -%>
- * @author    <%= pluginAuthorName %>
- * @copyright <%= copyrightNotice %>
- * @link      <%= pluginAuthorUrl %>
- * @package   <%= pluginHandle %>
- * @since     <%= pluginVersion %>
+{{/if}}
+ * @author    {{pluginAuthorName}}
+ * @copyright {{copyrightNotice}}
+ * @link      {{pluginAuthorUrl}}
+ * @package   {{pluginHandle}}
+ * @since     {{pluginVersion}}
  */
 
 namespace Craft;
 
-class <%= pluginHandle %><%= controllerName[index] %>Controller extends BaseController
+class {{pluginHandle}}{{controllerName[index]}}Controller extends BaseController
 {
 
     /**
@@ -40,9 +40,9 @@ class <%= pluginHandle %><%= controllerName[index] %>Controller extends BaseCont
         );
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
-     * Handle a request going to our plugin's index action URL, e.g.: actions/<%= pluginCamelHandle %>
-<% } -%>
+{{#if codeComments}}
+     * Handle a request going to our plugin's index action URL, e.g.: actions/{{pluginCamelHandle}}
+{{/if}}
      */
     public function actionIndex()
     {

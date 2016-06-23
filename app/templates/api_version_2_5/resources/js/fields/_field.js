@@ -1,18 +1,18 @@
 /**
- * <%= pluginName %> plugin for Craft CMS
+ * {{pluginName}} plugin for Craft CMS
  *
- * <%= pluginHandle %><%= fieldName[index] %>FieldType JS
+ * {{pluginHandle}}{{fieldName[index]}}FieldType JS
  *
- * @author    <%= pluginAuthorName %>
- * @copyright <%= copyrightNotice %>
- * @link      <%= pluginAuthorUrl %>
- * @package   <%= pluginHandle %>
- * @since     <%= pluginVersion %>
+ * @author    {{pluginAuthorName}}
+ * @copyright {{copyrightNotice}}
+ * @link      {{pluginAuthorUrl}}
+ * @package   {{pluginHandle}}
+ * @since     {{pluginVersion}}
  */
 
  ;(function ( $, window, document, undefined ) {
 
-    var pluginName = "<%= pluginHandle %><%= fieldName %>FieldType",
+    var pluginName = "{{pluginHandle}}{{fieldName}}FieldType",
         defaults = {
         };
 

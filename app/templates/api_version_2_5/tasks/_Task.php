@@ -1,10 +1,10 @@
 <?php
 /**
- * <%= pluginName %> plugin for Craft CMS
+ * {{pluginName}} plugin for Craft CMS
  *
- * <%= pluginHandle %><%= taskName[index] %> Task
+ * {{pluginHandle}}{{taskName[index]}} Task
  *
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
  * --snip--
  * Tasks let you run background processing for things that take a long time, dividing them up into steps.  For
  * example, Asset Transforms are regenerated using Tasks.
@@ -16,23 +16,23 @@
  * https://craftcms.com/classreference/services/TasksService
  * --snip--
  *
-<% } -%>
- * @author    <%= pluginAuthorName %>
- * @copyright <%= copyrightNotice %>
- * @link      <%= pluginAuthorUrl %>
- * @package   <%= pluginHandle %>
- * @since     <%= pluginVersion %>
+{{/if}}
+ * @author    {{pluginAuthorName}}
+ * @copyright {{copyrightNotice}}
+ * @link      {{pluginAuthorUrl}}
+ * @package   {{pluginHandle}}
+ * @since     {{pluginVersion}}
  */
 
 namespace Craft;
 
-class <%= pluginHandle %><%= taskName[index] %>Task extends BaseTask
+class {{pluginHandle}}{{taskName[index]}}Task extends BaseTask
 {
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Defines the settings.
      *
-<% } -%>
+{{/if}}
      * @access protected
      * @return array
      */
@@ -45,22 +45,22 @@ class <%= pluginHandle %><%= taskName[index] %>Task extends BaseTask
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Returns the default description for this task.
      *
-<% } -%>
+{{/if}}
      * @return string
      */
     public function getDescription()
     {
-        return '<%= pluginHandle %><%= taskName[index] %> Tasks';
+        return '{{pluginHandle}}{{taskName[index]}} Tasks';
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Gets the total number of steps for this task.
      *
-<% } -%>
+{{/if}}
      * @return int
      */
     public function getTotalSteps()
@@ -69,10 +69,10 @@ class <%= pluginHandle %><%= taskName[index] %>Task extends BaseTask
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Runs a task step.
      *
-<% } -%>
+{{/if}}
      * @param int $step
      * @return bool
      */

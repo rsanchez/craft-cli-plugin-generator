@@ -1,10 +1,10 @@
 <?php
 /**
- * <%= pluginName %> plugin for Craft CMS
+ * {{pluginName}} plugin for Craft CMS
  *
- * <%= pluginHandle %><%= elementName[index] %> ElementType
+ * {{pluginHandle}}{{elementName[index]}} ElementType
  *
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
  * --snip--
  * Element Types are the classes used to identify each of these types of elements in Craft. There’s a
  * “UserElementType”, there’s an “AssetElementType”, and so on. If you’ve ever developed a custom Field Type class
@@ -14,35 +14,35 @@
  * http://pixelandtonic.com/blog/craft-element-types
  * --snip--
  *
-<% } -%>
- * @author    <%= pluginAuthorName %>
- * @copyright <%= copyrightNotice %>
- * @link      <%= pluginAuthorUrl %>
- * @package   <%= pluginHandle %>
- * @since     <%= pluginVersion %>
+{{/if}}
+ * @author    {{pluginAuthorName}}
+ * @copyright {{copyrightNotice}}
+ * @link      {{pluginAuthorUrl}}
+ * @package   {{pluginHandle}}
+ * @since     {{pluginVersion}}
  */
 
 namespace Craft;
 
-class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElementType
+class {{pluginHandle}}{{elementName[index]}}ElementType extends BaseElementType
 {
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Returns this element type's name.
      *
-<% } -%>
+{{/if}}
      * @return mixed
      */
     public function getName()
     {
-        return Craft::t('<%= pluginHandle %><%= elementName[index] %>');
+        return Craft::t('{{pluginHandle}}{{elementName[index]}}');
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Returns whether this element type has content.
      *
-<% } -%>
+{{/if}}
      * @return bool
      */
     public function hasContent()
@@ -51,10 +51,10 @@ class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElemen
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Returns whether this element type has titles.
      *
-<% } -%>
+{{/if}}
      * @return bool
      */
     public function hasTitles()
@@ -63,10 +63,10 @@ class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElemen
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Returns whether this element type can have statuses.
      *
-<% } -%>
+{{/if}}
      * @return bool
      */
     public function hasStatuses()
@@ -75,10 +75,10 @@ class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElemen
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Returns whether this element type is localized.
      *
-<% } -%>
+{{/if}}
      * @return bool
      */
     public function isLocalized()
@@ -87,10 +87,10 @@ class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElemen
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Returns this element type's sources.
      *
-<% } -%>
+{{/if}}
      * @param string|null $context
      * @return array|false
      */
@@ -110,10 +110,10 @@ class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElemen
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Returns the attributes that can be shown/sorted by in table views.
      *
-<% } -%>
+{{/if}}
      * @param string|null $source
      * @return array
      */
@@ -122,10 +122,10 @@ class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElemen
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Returns the table view HTML for a given attribute.
      *
-<% } -%>
+{{/if}}
      * @param BaseElementModel $element
      * @param string $attribute
      * @return string
@@ -135,10 +135,10 @@ class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElemen
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Defines any custom element criteria attributes for this element type.
      *
-<% } -%>
+{{/if}}
      * @return array
      */
     public function defineCriteriaAttributes()
@@ -146,10 +146,10 @@ class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElemen
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Modifies an element query targeting elements of this type.
      *
-<% } -%>
+{{/if}}
      * @param DbCommand $query
      * @param ElementCriteriaModel $criteria
      * @return mixed
@@ -159,10 +159,10 @@ class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElemen
    }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Populates an element model based on a query result.
      *
-<% } -%>
+{{/if}}
      * @param array $row
      * @return array
      */
@@ -171,10 +171,10 @@ class <%= pluginHandle %><%= elementName[index] %>ElementType extends BaseElemen
     }
 
     /**
-<% if ((typeof codeComments !== 'undefined') && (codeComments)){ -%>
+{{#if codeComments}}
      * Returns the HTML for an editor HUD for the given element.
      *
-<% } -%>
+{{/if}}
      * @param BaseElementModel $element
      * @return string
      */
